@@ -1,5 +1,10 @@
 body{
     font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: auto;
+}
+
+header{
     background: 
     linear-gradient(
       rgba(0, 0, 0, 0.1),
@@ -7,16 +12,13 @@ body{
     ),
     url('nigerian-food-01.jpg');
     background-size: cover;
-    color: white;
-
-
+    height: 100vh;
 }
 
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 20px;
     align-items: baseline;
 }
 
@@ -79,3 +81,10 @@ body{
     color: #000000;
     border: 1px solid #ffffff;
 }   
+
+.text-container{
+    width: 200px;
+    height: 200px;
+    color: black;
+    text-align: center;
+}
