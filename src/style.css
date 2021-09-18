@@ -27,6 +27,10 @@ header{
     padding-left: 10px;
 }
 
+.header-nav:hover{
+    cursor: pointer;
+}
+
 #title{
     margin-top: 0;
     margin-bottom: 0;
@@ -74,6 +78,15 @@ header{
     font-weight: bold;
 }
 
+#about-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 120px;
+    margin-bottom: 250px;
+    align-items: baseline;
+}
+
 #about-button{
     font-size: 20px;
     padding: 10px 10px 10px 10px;
@@ -83,8 +96,25 @@ header{
 }   
 
 .text-container{
-    width: 200px;
-    height: 200px;
+    width: 437px;
+    height: 300px;
     color: black;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.image-container{
+    height: auto;
+    max-width: 300px;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
