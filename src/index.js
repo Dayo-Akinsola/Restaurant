@@ -1,5 +1,10 @@
 import './style.css';
-import { createHeader, createContent } from './pageLoad.js';
 
-createHeader();
-createContent();
+import { createHeader, createContent, aboutSection } from './pageLoad.js';
+
+const header = document.createElement('header');
+
+
+createHeader(header);
+createContent(header);
+aboutSection();
