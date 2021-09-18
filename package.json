@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Dayo-Akinsola/Restaurant/issues"
   },
-  "homepage": "https://github.com/Dayo-Akinsola/Restaurant#readme"
+  "homepage": "https://github.com/Dayo-Akinsola/Restaurant#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
+  }
 }
