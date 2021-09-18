@@ -1,0 +1,81 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url('nigerian-food-01.jpg');
+    background-size: cover;
+    color: white;
+
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: baseline;
+}
+
+.header-nav{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#title{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+}
+
+#content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    height: 90px;
+    /* width: 712px; */
+    text-align: center;
+    top: 200px;
+    bottom: 0;
+}
+
+#welcome{
+    border: solid black 4px;
+    width: 280px;
+    margin: 0px 0px 0px 0px;
+    padding: 25px 0px 20px 25px;
+    border-radius: 0px 0px 0px 0px;
+    position: relative;
+    bottom: 50px;
+}
+
+#headline{
+    font-size: 50px;
+    letter-spacing: 0.1em;
+}
+
+.header-navs{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+#welcome-text{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#about-button{
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+}   
