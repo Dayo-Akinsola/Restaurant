@@ -5,6 +5,7 @@ import createMenuPage from './menuPage';
 
 // Renders header at the top of all the site's pages
 const createHeader = () => {
+    const body = document.querySelector('body');
     const headerDiv = document.createElement('div');
     headerDiv.classList.add('header');
 
@@ -36,8 +37,7 @@ const createHeader = () => {
 
     headerDiv.appendChild(title);
     headerDiv.appendChild(navDiv);
-
-    return headerDiv;
+    body.appendChild(headerDiv);
 }
 
 // Loads Home page when the site os first visited
@@ -48,31 +48,34 @@ const defaultPage = () => {
 }
 
 const changePage = () => {
-    const body = document.querySelector('body');
     const welcomeSection = document.querySelector('#content-container');
     const aboutSection = document.querySelector('#about-section');
     const menuPage = document.querySelector('#menu-page');
-    const navBar = document.querySelectorAll('.header-nav');
+    const navBars = document.querySelectorAll('.header-nav');
+    const navBar = document.querySelector('.header');
 
-    navBar.forEach(nav => {
+    navBars.forEach(nav => {
         nav.addEventListener('click', () => {
-            if (body.childNodes[2] === welcomeSection){
-                console.log(body.childNodes[2]);
-                body.removeChild(body.childNodes[2]);
-                console.log(body.childNodes[2]);
-                body.removeChild(body.childNodes[2]);
-            }
-            else body.removeChild(body.childNodes[2]);
+            if (nav.id === 'home'){
+                welcomeSection.style.display = 'block';
+                aboutSection.style.display = 'flex';
+                menuPage.style.display = 'none';
+            } 
 
-            if (nav.id === 'home') createHomePage();
-            else if (nav.id === 'menu') createMenuPage();
+            else if (nav.id === 'menu'){
+                welcomeSection.style.display = 'none';
+                aboutSection.style.display = 'none';
+                menuPage.style.display = 'block';
+            }
         })
     })
 
 
 }
 
+createHeader();
 createHomePage();
+createMenuPage();
 changePage();
 
 export { createHeader };
