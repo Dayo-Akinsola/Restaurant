@@ -1,10 +1,32 @@
 import './style.css';
 
-import { createHeader, createContent, aboutSection } from './pageLoad.js';
+import { createHeader, welcomePage, aboutSection } from './pageLoad.js';
+import createMenuPage from './menuPage';
 
-const header = document.createElement('header');
+const headerTag = document.createElement('header');
+
+const pageRender = () => {
+    const navBar = document.querySelectorAll('.header-nav');
+
+    navBar.forEach(nav => {
+        nav.addEventListener('click', () => {
+            if (nav.id === 'home'){
+            }
+        })
+    })
+}
+
+const renderHeader = () => {
+    createHeader(headerTag);
+}
+
+const renderHome = () => {
+    welcomePage(headerTag);  
+    aboutSection();
+}
 
 
-createHeader(header);
-createContent(header);
-aboutSection();
+renderHeader();
+renderHome();
+pageRender();
+createMenuPage();
