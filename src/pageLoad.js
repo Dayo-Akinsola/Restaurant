@@ -1,5 +1,4 @@
 import { renderContent, renderTextSection, renderImage } from "./helpers";
-import { createHeader } from "./index.js";
 
 const dummyText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
@@ -9,7 +8,6 @@ const welcomeSection = () => {
     const contentContainer = document.createElement('div');
     const aboutButton = document.createElement('button');
     const headerTag = document.createElement('header');
-    const header = createHeader();
 
 
     contentContainer.setAttribute('id', 'content-container');
@@ -19,7 +17,7 @@ const welcomeSection = () => {
     const headlineDiv = renderContent('head', 'headline', 'Authentic Nigerian Cuisine', 'h1');
     aboutButton.setAttribute('id', 'about-button'); aboutButton.textContent = 'About Us';
 
-    const elementArray = [header, welcome, headlineDiv, aboutButton];
+    const elementArray = [welcome, headlineDiv, aboutButton];
     elementArray.forEach(element => headerTag.appendChild(element));
 
     body.appendChild(contentContainer);
