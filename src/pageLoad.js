@@ -2,7 +2,7 @@ import { renderContent, renderTextSection, renderImage } from "./helpers";
 
 const dummyText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
-const createHeader = (header) => {
+const createHeader = (headerTag) => {
     const body = document.querySelector('body');
     const headerDiv = document.createElement('div');
     headerDiv.classList.add('header');
@@ -35,13 +35,13 @@ const createHeader = (header) => {
 
     headerDiv.appendChild(title);
     headerDiv.appendChild(navDiv);
-    header.appendChild(headerDiv)
-    body.appendChild(header);
+    headerTag.appendChild(headerDiv)
+    body.appendChild(headerTag);
 }
 
 
 // Renders the top part of the home page when the page is loaded.
-const createContent = (header) => {
+const welcomePage = (headerTag) => {
     const body = document.querySelector('body');
     const contentContainer = document.createElement('div');
     const aboutButton = document.createElement('button');
@@ -54,9 +54,9 @@ const createContent = (header) => {
 
     const elementArray = [welcome, headlineDiv, aboutButton];
     elementArray.forEach(element => contentContainer.appendChild(element));
-    header.appendChild(contentContainer);
+    headerTag.appendChild(contentContainer);
     
-    body.appendChild(header);
+    body.appendChild(headerTag);
 
 }
 
@@ -78,4 +78,4 @@ const aboutSection = () => {
 
 }
  
-export { createHeader, createContent, aboutSection};    
+export { createHeader, welcomePage, aboutSection};    
