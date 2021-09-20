@@ -1,3 +1,5 @@
+import { starters, main, desserts } from "./menuItems";
+
 const menuPageHeading = () => {
     const heading = document.createElement('h2');
     const subHeading = document.createElement('p');
