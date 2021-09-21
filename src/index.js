@@ -2,6 +2,7 @@ import './style.css';
 
 import { createHomePage } from './pageLoad.js';
 import createMenuPage from './menuPage';
+import { createReservationsPage } from './reservationsPage';
 
 // Renders header at the top of all the site's pages
 const createHeader = () => {
@@ -40,17 +41,11 @@ const createHeader = () => {
     body.appendChild(headerDiv);
 }
 
-// Loads Home page when the site os first visited
-const defaultPage = () => {
-    window.addEventListener('load', () => {
-        createHomePage();
-    })
-}
-
 const changePage = () => {
     const welcomeSection = document.querySelector('#content-container');
     const aboutSection = document.querySelector('#about-section');
     const menuPage = document.querySelector('#menu-page');
+    const reservationsPage = document.querySelector('#reservations-page-container');
     const navBars = document.querySelectorAll('.header-nav');
     const navBar = document.querySelector('.header');
 
@@ -59,13 +54,22 @@ const changePage = () => {
             if (nav.id === 'home'){
                 welcomeSection.style.display = 'block';
                 aboutSection.style.display = 'flex';
+                reservationsPage.style.display = 'none';
                 menuPage.style.display = 'none';
             } 
 
             else if (nav.id === 'menu'){
                 welcomeSection.style.display = 'none';
                 aboutSection.style.display = 'none';
+                reservationsPage.style.display = 'none';
                 menuPage.style.display = 'block';
+            }
+
+            else if (nav.id === 'reservations'){
+                welcomeSection.style.display = 'none';
+                aboutSection.style.display = 'none';
+                menuPage.style.display = 'none';
+                reservationsPage.style.display = 'block';
             }
         })
     })
@@ -76,6 +80,7 @@ const changePage = () => {
 createHeader();
 createHomePage();
 createMenuPage();
+createReservationsPage();
 changePage();
 
 export { createHeader };
