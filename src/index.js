@@ -29,8 +29,8 @@ const createHeader = () => {
             nav.textContent = 'Menu';
         }
         else {
-            nav.setAttribute('id', 'contact');
-            nav.textContent = 'Contact';
+            nav.setAttribute('id', 'reservations');
+            nav.textContent = 'Reservations';
         }
         navDiv.appendChild(nav);
     }
