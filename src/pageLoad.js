@@ -1,7 +1,7 @@
 import { renderContent, renderTextSection, renderImage } from "./helpers";
 
 const dummyText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-
+const dummyText2 = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus." 
 // Renders the top part of the home page when the page is loaded.
 const welcomeSection = () => {
     const body = document.querySelector('body');
@@ -23,25 +23,35 @@ const welcomeSection = () => {
     body.appendChild(contentContainer);
 }
 
-const aboutSection = () => {
+const bioSection = () => {
     const body = document.querySelector('body');
     const aboutSection = document.createElement('div');
+    const missionSection = document.createElement('div');
+    const container = document.createElement('div');
 
-    aboutSection.setAttribute('id', 'about-section');
+    container.id = 'bio-section-container';
+    aboutSection.id = 'about-section';
+    missionSection.id = 'mission-section';
 
     const imageOneDiv = renderImage('imageOne-container', 'https://nomadparadise.com/wp-content/uploads/2020/08/nigerian-food-09.jpg');
-    const textDiv = renderTextSection(dummyText, 'About Us');
+    const textDiv1 = renderTextSection(dummyText, 'About Us');
     const imageTwoDiv = renderImage('imageTwoDiv', 'https://nomadparadise.com/wp-content/uploads/2020/08/nigerian-food-13.jpg');
+    const textDiv2 = renderTextSection(dummyText2, 'Our Mission');
 
-    const elementArray = [imageOneDiv, textDiv, imageTwoDiv];
-    elementArray.forEach(element => aboutSection.appendChild(element));
 
-    body.appendChild(aboutSection);
+    const aboutSectionArray = [textDiv1, imageOneDiv];
+    aboutSectionArray.forEach(element => aboutSection.appendChild(element));
+    const missionSectionArray = [textDiv2, imageTwoDiv];
+    missionSectionArray.forEach(element => missionSection.appendChild(element));
+
+    container.appendChild(aboutSection); container.appendChild(missionSection);
+
+    body.appendChild(container);
 }
 
 const createHomePage = () => {
     welcomeSection();
-    aboutSection();
+    bioSection();
 }
  
 export { createHomePage }
