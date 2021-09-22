@@ -61,6 +61,7 @@ const generateReservationsForm = () => {
 
     submitButton.id = 'submit-btn';
     submitButton.type = 'submit';
+    submitButton.value = 'Book';
 
     const fieldArray = [nameField, dateField, timeField, numberOfGuests, email, submitButton];
     fieldArray.forEach(field => form.appendChild(field));
