@@ -41,13 +41,35 @@ const createHeader = () => {
     body.appendChild(headerDiv);
 }
 
+const footer = () => {
+    const body = document.querySelector('body');
+    const footerContainer = document.createElement('footer');
+    const footerContentContainer = document.createElement('div');
+    const footerTag = document.createElement('a');
+    const footerText = document.createElement('span');
+
+    footerContainer.id = 'footer-container';
+    footerContentContainer.id = 'footer-content-container';
+    footerTag.id = 'footer-tag';
+    footerText.id = 'footer-text';
+
+    footerTag.classList.add('fa'); footerTag.classList.add('fa-github');
+    footerTag.href = 'https://github.com/Dayo-Akinsola'
+    footerText.textContent = 'Created By Dayo Akinsola';
+
+    footerContentContainer.appendChild(footerTag); footerContentContainer.appendChild(footerText);
+    footerContainer.appendChild(footerContentContainer);
+
+    body.appendChild(footerContainer);
+}
+
 const changePage = () => {
     const welcomeSection = document.querySelector('#content-container');
     const bioSection = document.querySelector('#bio-section-container');
     const menuPage = document.querySelector('#menu-page');
-    const reservationsPage = document.querySelector('.reservations-page');
+    const reservationsPage = document.querySelector('#reservations-page-container');
     const navBars = document.querySelectorAll('.header-nav');
-    const navBar = document.querySelector('.header');
+    const navBar = document.querySelectorAll('.header');
 
     navBars.forEach(nav => {
         nav.addEventListener('click', () => {
@@ -56,6 +78,8 @@ const changePage = () => {
                 bioSection.style.display = 'block';
                 reservationsPage.style.display = 'none';
                 menuPage.style.display = 'none';
+                window.scrollTo(0, 0);
+                navBar.forEach(nav => nav.style.color = 'white');
             } 
 
             else if (nav.id === 'menu'){
@@ -63,24 +87,28 @@ const changePage = () => {
                 bioSection.style.display = 'none';
                 reservationsPage.style.display = 'none';
                 menuPage.style.display = 'block';
+                window.scrollTo(0, 0);
+                navBar.forEach(nav => nav.style.color = 'white');
+
             }
 
             else if (nav.id === 'reservations'){
                 welcomeSection.style.display = 'none';
                 bioSection.style.display = 'none';
                 menuPage.style.display = 'none';
-                reservationsPage.style.display = 'flex';
+                reservationsPage.style.display = 'block';
+                window.scrollTo(0, 0);
+                navBar.forEach(nav => nav.style.color = 'black');
             }
         })
     })
-
-
 }
 
 createHeader();
 createHomePage();
 createMenuPage();
 createReservationsPage();
+footer();
 changePage();
 
 export { createHeader };
