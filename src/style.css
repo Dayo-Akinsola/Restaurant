@@ -1,5 +1,3 @@
-
-
 body{
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -12,7 +10,7 @@ header{
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.1)
     ),
-    url('nigerian-food-01.jpg');
+    url('img/nigerian-food-01.jpg');
     background-size: cover;
     height: 100vh;
 }
@@ -25,7 +23,7 @@ header{
     align-items: baseline;
     width: 1540px;
     background-color: #0000001f;
-    color: black;
+    color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     z-index: 100;
@@ -61,13 +59,11 @@ header{
     margin: auto;
     padding: 25px 0px 20px 25px;
     border-radius: 0px 0px 0px 0px;
-    position: relative;
-    top: 100px;
 }
 
-#head{
+.content{
     position: relative;
-    top: 100px;
+    top: 222px
 }
 
 #headline{
@@ -85,23 +81,34 @@ header{
     font-weight: bold;
 }
 
+#bio-section-container{
+    display: 'none';
+}
+
 #about-section{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 120px;
-    margin-bottom: 250px;
-    align-items: baseline;
+    margin-bottom: 200px;
+}
+
+#mission-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    margin-bottom: 180px;
 }
 
 #about-button{
-    font-size: 20px;
-    padding: 10px 10px 10px 10px;
+    font-size: 24px;
+    padding: 14px 14px 14px 14px;
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #ffffff;
     position: relative;
-    top: 100px;
+    top: 220px;
 }   
 
 .text-container{
@@ -110,7 +117,8 @@ header{
     color: black;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px
+    font-size: 20px;
+    font-family: adobe-garamond-pro;
 }
 
 img{
@@ -130,10 +138,251 @@ img{
     display: none;
     color: black;
     position: relative;
-    top: 100px;
+    top: -20px;
 }
 
 #menu-heading-container{
     text-align: center; 
     margin-top: 10px;
+    margin-bottom: 64px;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url('img/suya.jpg');
+    background-size: cover;
+    height: 64vh;
 }
+
+#menu-heading{
+    font-size: 50px;
+    position: relative;
+    top: 180px;
+    margin: auto;
+    color: white;
+
+}
+
+#menu-subheading{
+    color: white;
+    font-size: 20px;
+}
+
+.menu-section{
+    color: black;
+    margin-bottom: 4rem;
+
+}
+
+.course-heading{
+    text-align: center;
+    background-color: #23852370;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.course-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    width: 743px;
+    grid-gap: 53px;
+    margin: auto;
+}
+
+.item{
+    border-style: ridge;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 5px 5px rgba(0,0,0,.15);
+}
+
+.item p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#reservations-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#reservations-heading::after{
+    content: '';
+    height: 4px;
+    width: 200px;
+    background: #978970;
+    position: absolute;
+    left: 0;
+    left: 50%;
+    margin-left: -100px;
+    right: unset;
+    top: 103px;
+}
+
+#reservations-page-container{
+    display: block;
+    position: absolute;
+    color: black;
+    margin: 0 auto;
+    left: 36%;
+    top: 104px;
+    font-family: adobe-garamond-pro;
+    padding: 35px 35px 9px 35px;
+    border-radius: 8px;
+    border-style: ridge;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 426px;
+}
+
+.input-field{
+    padding-bottom: 20px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#first-name{
+    margin-right: 10px;
+}
+
+#reservation-party{
+    width: 100%;
+    height: 40px;
+}
+
+#reservation-date{
+    width: 100%;
+    height: 40px;
+}
+
+#reservation-time{
+    width: 100%;
+    height: 40px;
+}
+
+#reservation-email{
+    width: 100%;
+    height: 40px;
+}
+
+input{
+    height: 40px;
+    box-shadow:10px 10px 15px 0px rgba(0, 0, 0, 0.055);
+    border-color: darkgray;
+    border-style: double;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+#submit-btn{
+    border-radius: 4px;
+    background-color: #374049;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 16px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    margin: auto;
+}
+
+#submit-btn:hover::before {
+    width: 0px;
+    background: #5ca1e1;
+}
+  
+#submit-btn:hover::after {
+    height: 0px;
+    background: #5ca1e1;
+}
+  
+#submit-btn:hover {
+    background: #5ca1e1;
+}
+#submit-btn :active{
+    box-shadow: 0 5px 10px -8px rgba(0, 0, 0,.7);
+    transform: translateY(3px);
+    
+}
+
+#submit-btn.clicked{
+    box-shadow: 0 5px 10px -8px rgba(0, 0, 0,.7);
+    transform: translateY(3px);
+    background: #5ca1e1;
+}
+
+.contact-info-container{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 201px;
+    left: 134px;
+    background-color: #0000001f;
+    padding: 28px 28px 28px 28px;
+    border-radius: 8px;
+    font-family: adobe-garamond-pro;
+    font-size: 1.2em;
+}
+
+.reservations-page{
+    display: none;
+}
+
+#contact-heading{
+    color: #978970;
+    font-family: adobe-garamond-pro;
+}
+
+#contact-text{
+    margin-bottom: 10px;
+}
+
+.social-media-icons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    justify-content: space-around;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa-reddit {
+    background: #ff5700;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+  
