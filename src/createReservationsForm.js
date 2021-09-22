@@ -28,6 +28,7 @@ const reservationsFormName = () => {
     return nameContainer;
 }
 
+// Used to create input fields for reservations form
 const createFormInputField = (labelText, inputType, isRequired) => {
     const container = document.createElement('div');
     const label = document.createElement('label');
