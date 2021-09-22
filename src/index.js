@@ -43,9 +43,9 @@ const createHeader = () => {
 
 const changePage = () => {
     const welcomeSection = document.querySelector('#content-container');
-    const aboutSection = document.querySelector('#about-section');
+    const bioSection = document.querySelector('#bio-section-container');
     const menuPage = document.querySelector('#menu-page');
-    const reservationsPage = document.querySelector('#reservations-page-container');
+    const reservationsPage = document.querySelector('.reservations-page');
     const navBars = document.querySelectorAll('.header-nav');
     const navBar = document.querySelector('.header');
 
@@ -53,23 +53,23 @@ const changePage = () => {
         nav.addEventListener('click', () => {
             if (nav.id === 'home'){
                 welcomeSection.style.display = 'block';
-                aboutSection.style.display = 'flex';
+                bioSection.style.display = 'block';
                 reservationsPage.style.display = 'none';
                 menuPage.style.display = 'none';
             } 
 
             else if (nav.id === 'menu'){
                 welcomeSection.style.display = 'none';
-                aboutSection.style.display = 'none';
+                bioSection.style.display = 'none';
                 reservationsPage.style.display = 'none';
                 menuPage.style.display = 'block';
             }
 
             else if (nav.id === 'reservations'){
                 welcomeSection.style.display = 'none';
-                aboutSection.style.display = 'none';
+                bioSection.style.display = 'none';
                 menuPage.style.display = 'none';
-                reservationsPage.style.display = 'block';
+                reservationsPage.style.display = 'flex';
             }
         })
     })
